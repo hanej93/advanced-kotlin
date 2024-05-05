@@ -2,6 +2,9 @@ package generic
 
 fun main() {
   val cage: Cage2<out Fish> = Cage2<GoldFish>()
+
+  // Any? 가 아닌 Any로 붙임으로써 Not-Null 타입으로 한정시킬  수 있다.
+//  Cage2<GoldFish?>()
 }
 
 class Cage2<T : Any> {
