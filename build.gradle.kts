@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm") version "1.9.23"
-    id("me.champeau.gradle.jmh") version "0.5.3"
+    id("me.champeau.jmh") version "0.7.2"
     id("org.jetbrains.dokka") version "1.9.20"
     id("org.jlleitschuh.gradle.ktlint") version "12.1.0"
 }
@@ -24,4 +24,11 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(21)
+}
+
+jmh {
+    threads = 1
+    fork = 1
+    warmupIterations = 1
+    iterations = 1
 }
